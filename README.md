@@ -73,7 +73,19 @@ print('Values of MSE')
 ```
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/2fadb635-d688-4856-897a-17683f7e951c)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/45eca00c-f739-417f-8220-bfea988d70b8)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/814827cb-bd80-4ded-9019-516e53d42502)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/0ece15f6-b28b-44a5-9c1d-a5bb7c878463)
+
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/48199976-16b4-4108-95b1-21ceff066629)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/9622a585-d834-4ab9-8930-55cbc848256c)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/bedb9ff5-f2f1-465e-acc0-4ea257525889)
+
+
+
+
+
 
 
 ## Result:
