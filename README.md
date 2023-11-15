@@ -15,72 +15,83 @@ To write a program to predict the marks scored by a student using the simple lin
 5. Predict the regression for marks by using the representation of the graph.
 
 ## Program:
-```
+/*
+Program to implement the simple linear regression model for predicting the marks scored.
+Developed by: Gokul
+RegisterNumber:  212221220013
+*/
+```py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error,mean_squared_error
 df=pd.read_csv('/content/student_scores.csv')
-#displaying the content in datafile
-print("df.head():")
 df.head()
-print("df.tail():")
 df.tail()
-#Segregating data to variables
-print("Array value of X:")
-X=df.iloc[:,:-1].values
+X = df.iloc[:,:-1].values
 X
-print("Array value of X:")
-Y=df.iloc[:,1].values
+Y = df.iloc[:,1].values
 Y
-#splitting train and test data
 from sklearn.model_selection import train_test_split
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=1/3,random_state=0)
 from sklearn.linear_model import LinearRegression
 regressor=LinearRegression()
 regressor.fit(X_train,Y_train)
 Y_pred=regressor.predict(X_test)
-#displaying predicted values
-print("Values of Y prediction:")
 Y_pred
-#displaying actual values
-print("Array values of Y test:")
 Y_test
-#graph plot for training data
-print("Training set graph:")
-plt.scatter(X_train,Y_train,color="orange")
-plt.plot(X_train,regressor.predict(X_train),color="red")
-plt.title("Hours vs Scores (Training Set)")
+plt.scatter(X_train,Y_train,color="blue")
+plt.plot(X_train,regressor.predict(X_train),color="black")
+plt.title("Hours vs Scores(Training Set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
-#graph plot for test data
-print("Test set graph:")
-plt.scatter(X_test,Y_test,color="purple")
-plt.plot(X_test,regressor.predict(X_test),color="yellow")
-plt.title("Hours vs Scores (Test Set)")
+plt.scatter(X_test,Y_test,color="yellow")
+plt.plot(X_test,regressor.predict(X_test),color="black")
+plt.title("Hours vs Scores(Training Set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
-print("Values of MSE,MAE and RMSE:")
 mse=mean_squared_error(Y_test,Y_pred)
-print('MSE = ',mse)
+print("MSE= ",mse)
 mae=mean_absolute_error(Y_test,Y_pred)
-print('MAE = ',mae)
+print("MAE= ",mae)
 rmse=np.sqrt(mse)
-print('RMSE = ',rmse)
-print('Values of MSE')
+print("RMSE= ",rmse)
 ```
 
-## Output:
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/2fadb635-d688-4856-897a-17683f7e951c)
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/45eca00c-f739-417f-8220-bfea988d70b8)
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/814827cb-bd80-4ded-9019-516e53d42502)
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/0ece15f6-b28b-44a5-9c1d-a5bb7c878463)
+### Output:
+## df.head():
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/99d90245-c5d4-4aab-9960-61c843e233ee)
+## df.tail():
+ ![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/c03774e8-e0fa-4e6e-8e17-a4f78ff6c836)
+## Array value of X:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/4471d5b7-1d38-4f47-a833-fb7bae85ac08)
+## Array value of Y:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/b333b975-5b36-4392-894c-e98738ec3fcc)
+## Values of Y prediction:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/46239dd3-8d7f-4732-8456-37e46533f42c)
+## Array values of Y test:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/19bad4c7-7456-4d3e-8462-8d2b54334788)
+## Training set graph:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/6bb69b87-b4b9-45cd-89ff-43d873e8127b)
+## Test set graph:
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/b3378399-355e-40e1-a1ff-1cd6b887f552)
+## Values of MSE,MAE and RMSE:
 
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/48199976-16b4-4108-95b1-21ceff066629)
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/9622a585-d834-4ab9-8930-55cbc848256c)
-![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/bedb9ff5-f2f1-465e-acc0-4ea257525889)
+![image](https://github.com/babavoss05/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/103019882/dd159722-4394-4314-b812-eaa303c0c628)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
